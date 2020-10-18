@@ -1,0 +1,15 @@
+html,
+body {
+    margin: 0;
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: #333;
+}
+
+.layout-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
