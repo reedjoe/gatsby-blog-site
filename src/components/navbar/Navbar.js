@@ -35,10 +35,9 @@ const Navbar = class extends React.Component {
 
     render() {
         return (
-            <div>
-                <nav>
-                    <div class="navbar-main">
-                        <div class="has-text-centered">
+            <nav>
+                    <div className="navbar-main">
+                        <div className="has-text-centered">
                             <Link className="navbar-item" to="/">
                                 Home
                             </Link>
@@ -54,7 +53,7 @@ const Navbar = class extends React.Component {
                         </div>
                     </div>
                     <div id="navMenu" className={`navbar-menu ${this.state.navBarActiveClass}`}>
-                        <div class="navbar-start has-text-centered">
+                        <div className="navbar-start has-text-centered">
 
                             <Link className="navbar-item" to="/about">
                                 About
@@ -72,7 +71,6 @@ const Navbar = class extends React.Component {
 
                     </div>
                 </nav>
-            </div>
         )
     }
 }
