@@ -81,9 +81,6 @@ const BlogCard = ({
   title,
   date,
   description,
-  comments,
-  likes,
-  views,
   actions,
 }) => (
   <StyledContainer containerBorder="#fff" linGradMain="" linGradSecond="">
