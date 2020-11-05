@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 import './styles.css';
 
@@ -7,7 +8,7 @@ const Contact = () => {
   return (
     <div>
       <Layout>
-        <h2>Contact</h2>
+        <ContactForm></ContactForm>
       </Layout>
     </div>
   )
