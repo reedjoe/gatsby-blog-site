@@ -4,7 +4,7 @@ nav {
     float: left;
     margin: 0 0 3em 0;
     padding: 0;
-    background-color: #f2f2f2;
+    background-color: aliceblue;
     border-bottom: 1px solid #ccc; 
     border-top: 1px solid #ccc; 
     display: flex;
@@ -18,6 +18,7 @@ nav {
     font-weight: 400;
     color: #4a4a4a;
     line-height: 2.2;
+    z-index: 999;
 }
 
 .navbar-main {
