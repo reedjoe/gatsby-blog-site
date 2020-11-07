@@ -89,7 +89,7 @@ const BlogCard = ({
     <Description>{description}</Description>
     <Actions linGradMain="">
       {actions.map(({ label, path }) => (
-        <StyledLink to={path}><Action>{label}</Action></StyledLink>
+        <StyledLink key={path} to={path}><Action>{label}</Action></StyledLink>
       ))}
     </Actions>
   </StyledContainer>

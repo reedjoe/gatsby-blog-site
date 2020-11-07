@@ -26,39 +26,6 @@ const StyledContainer = styled.div`
 const BlogCardParent = () => {
 	const date = new Date().toLocaleDateString()
 
-	const onKeepReadingClick = () => alert('Redirect to blog post');
-	const onViewCodeClick = () => alert('Redirect to github repo');
-	const onViewSiteClick = () => alert('Redirect to site');
-
-	const buttons = [
-		{
-			label: (
-				<>
-					Keep Reading
-				</>
-			),
-			onClick: onKeepReadingClick,
-			path: "/blog/aws-cert-saa",
-		},
-		{
-			label: (
-				<>
-					Code
-				</>
-			),
-			onClick: onViewCodeClick,
-			path: "https://github.com/reedjoe/face-recognition-brain",
-		},
-		{
-			label: (
-				<>
-					Site
-				</>
-			),
-			onClick: onViewSiteClick,
-		},
-	]
-
 	return (
 		<StyledRoot>
 			<StyledContainer>
@@ -77,7 +44,7 @@ const BlogCardParent = () => {
 										Keep Reading
 									</>
 								),
-								path: "/blog/aws-cert-saa",
+								path: "/blog/aws-cert-saa"
 							},
 							{
 								label: (
@@ -110,7 +77,7 @@ const BlogCardParent = () => {
 			<StyledContainer>
 				<Card
 					title="AWS Lambda Web Scraper"
-					date={date}
+					date={"28/08/20"}
 					description="An AWS Lambda function built using the Serverless framework that runs 
 						on a daily cron job. It uses the Cheerio library to scrape Smooth 4000's Souncloud 
 						page and checks whether a new song has been uploaded. If a new song is found it 
@@ -156,45 +123,6 @@ const BlogCardParent = () => {
 							}
 						]
 					}
-				/>
-			</StyledContainer>
-			<StyledContainer>
-				<Card
-					title="The Benefits of Green Apples"
-					date={date}
-					description="Green apples have a high fiber content which helps in increasing the
-      body's metabolism. While consuming an apple, make sure that you're not
-      tossing the peel in the trash. Consuming apple with its peel improves
-      the overall health. Due to its high fiber content, apple helps in
-      detoxification process. It keeps the liver and digestive system away
-      from harmful elements."
-					actions={buttons}
-				/>
-			</StyledContainer>
-			<StyledContainer>
-				<Card
-					title="The Benefits of Green Apples"
-					date={date}
-					description="Green apples have a high fiber content which helps in increasing the
-      body's metabolism. While consuming an apple, make sure that you're not
-      tossing the peel in the trash. Consuming apple with its peel improves
-      the overall health. Due to its high fiber content, apple helps in
-      detoxification process. It keeps the liver and digestive system away
-      from harmful elements."
-					actions={buttons}
-				/>
-			</StyledContainer>
-			<StyledContainer>
-				<Card
-					title="The Benefits of Green Apples"
-					date={date}
-					description="Green apples have a high fiber content which helps in increasing the
-      body's metabolism. While consuming an apple, make sure that you're not
-      tossing the peel in the trash. Consuming apple with its peel improves
-      the overall health. Due to its high fiber content, apple helps in
-      detoxification process. It keeps the liver and digestive system away
-      from harmful elements."
-					actions={buttons}
 				/>
 			</StyledContainer>
 		</StyledRoot>
