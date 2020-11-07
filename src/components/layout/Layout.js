@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   return (
     <div className='layout-wrapper'>
       <Navbar />
-        <div style={{ marginTop: `60px`, padding: `0 1rem`, color: `white`, flexGrow: `1`}}>
+        <div style={{ marginTop: `53px`, padding: `0 1rem`, color: `white`, flexGrow: `1`, height: `100%`}}>
             {children}
         </div>
       <Footer />
