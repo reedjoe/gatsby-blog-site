@@ -6,7 +6,9 @@ class GithubCard extends React.Component {
         super(props);
         this.state = {
             error: null,
-            isLoaded: false,
+            commitsError: null,
+            isProfileLoaded: false,
+            areCommitsLoaded: false,
             item: {},
             commits: []
         };
@@ -18,41 +20,42 @@ class GithubCard extends React.Component {
             .then(
                 (result) => {
                     this.setState({
-                        isLoaded: true,
+                        isProfileLoaded: true,
                         item: result
                     });
                 },
                 (error) => {
                     this.setState({
-                        isLoaded: true,
-                        error
+                        isProfileLoaded: true,
+                        error: error
                     });
                 }
             )
-            fetch("https://api.github.com/users/reedjoe/events")
+        fetch("https://api.github.com/users/reedjoe/events")
             .then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
+                        areCommitsLoaded: true,
                         commits: result
                     });
                 },
                 (error) => {
                     this.setState({
-                        error
+                        areCommitsLoaded: true,
+                        commitsError: error
                     });
                 }
             )
     }
 
     render() {
-        const { error, isLoaded, item, commits } = this.state;
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
-            return <div>Loading...</div>;
+        const { error, isProfileLoaded, commitsError, areCommitsLoaded, item, commits } = this.state;
+        if (!isProfileLoaded) {
+            return <div><div><i class="fas fa-spinner fa-spin"></i></div></div>;
         } else {
             return (
+                error ? <div>Error: {error.message}</div> :
                 <GithubCardContainer>
                     <Header href={item.html_url}>
                         <ProfileImage src={item.avatar_url}></ProfileImage>
@@ -78,7 +81,9 @@ class GithubCard extends React.Component {
                     </StatsSection>
                     <CommitHeader>Latest Commits</CommitHeader>
                     <StatsSection>
-                        {commits
+                        {!areCommitsLoaded ? <div><div><i class="fas fa-spinner fa-spin"></i></div></div> :
+                        commitsError ? <div>Error: {commitsError.message}</div> :
+                        commits
                         .filter((i, index) => i.type === "PushEvent")
                         .filter((i, index) => (index < 3))
                         .map((i, index) => (
@@ -137,7 +142,6 @@ const ProfileName = styled.div`
 const ProfileBio = styled.span`
     color: #707070;
     font-size: 14px;
-    padding-right: 25px;
 `
 
 const StatsSection = styled.div`

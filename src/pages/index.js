@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout/Layout"
+import '@fortawesome/fontawesome-free/js/all.js';
 
 import './styles.css';
 

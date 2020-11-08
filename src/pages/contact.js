@@ -29,6 +29,8 @@ const ContactContainer = styled.div`
   }
 `
 const LeftDiv1 = styled.div`
+  max-width: 400px;
+  width: 100%;
   grid-row: 1 / 2;
   grid-column: 1 / 2;
   @media (max-width: 823px) {
@@ -37,6 +39,8 @@ const LeftDiv1 = styled.div`
   }
 `
 const LeftDiv2 = styled.div`
+  max-width: 400px;
+  width: 100%;
   grid-row: 2 / 3;
   grid-column: 1 / 2;
   @media (max-width: 823px) {
@@ -51,7 +55,7 @@ const Contact = () => {
       <Layout>
         <ContactContainer>
           <LeftDiv1><GithubCard></GithubCard></LeftDiv1>
-          <LeftDiv2>Left Text 2</LeftDiv2>
+          <LeftDiv2><GithubCard></GithubCard></LeftDiv2>
           <ContactForm></ContactForm>
         </ContactContainer>
       </Layout>
