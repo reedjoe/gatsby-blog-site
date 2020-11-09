@@ -7,5 +7,5 @@
 module.exports = {
   /* Your site config here */
   pathPrefix: "/gatsby-blog-site",
-  plugins: [],
+  plugins: [`gatsby-plugin-styled-components`],
 }

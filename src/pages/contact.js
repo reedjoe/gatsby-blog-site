@@ -5,6 +5,8 @@ import Layout from "../components/layout/Layout"
 import ContactForm from "../components/contactForm/ContactForm"
 import GithubCard from "../components/githubCard/GithubCard"
 
+import '@fortawesome/fontawesome-free/js/all.js';
+
 import './styles.css';
 
 const ContactContainer = styled.div`
