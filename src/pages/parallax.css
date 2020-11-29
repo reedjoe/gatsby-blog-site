@@ -48,11 +48,25 @@
     z-index: -1;
 }
 
-.overflow {
-    height: 200vh;
+.code-wrapper {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    color: white;
+    font-size: 35px;
 }
 
-@media (max-width: 823px) {
+.parallax-code {
+    position: absolute;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overflow {
+    height: 100vh;
+}
+
+@media (max-width: 850px) {
     .headline {
         font-size: 6rem;
     }
@@ -62,9 +76,14 @@
     .sub-headline {
         font-size: 3rem;
     }
+    .code-wrapper {
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        font-size: 25px;
+    }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 600px) {
     .headline {
         font-size: 4rem;
     }
@@ -73,5 +92,10 @@
     }  
     .sub-headline {
         font-size: 2rem;
+    }
+    .code-wrapper {
+        /* margin-top: 5vh;
+        margin-bottom: 5vh; */
+        font-size: 12px;
     }
 }
