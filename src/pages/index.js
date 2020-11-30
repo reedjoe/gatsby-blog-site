@@ -33,72 +33,82 @@ export default function Home() {
 
   return (
     <div>
-       <Layout isFullWidth>
-       <div className="App">
-      <section className="hero">
-        <img
-          src="https://picsum.photos/id/1/800/600"
-          alt="test"
-          className="parallax"
-          style={{
-            filter: `blur(4px)`,
-            transform: `translateY(${offset * 0.5}px)`
-          }}
-        />
-        <div className="text-wrapper">
-          <h1 className="headline">BlogSite</h1>
-          <h2 className="sub-headline">A Gatsby Blog Site</h2>
-        </div>
-      </section>
-      <div className="code-wrapper" style={{position: "relative"}}>
-      <div
-          className="parallax-code"
-          style={{
-            top: `${CalcYSpacing(0)}px`,
-            transform: `translateX(${CalcXOffset(0.1)}px)`
-          }}
-        >using System;</div>
-        <div
-          className="parallax-code"
-          style={{
-            top: `${CalcYSpacing(1)}px`,
-            transform: `translateX(${CalcXOffset(0.2)}px)`
-          }}
-        >using System.Linq;</div>
-        <div
-          className="parallax-code"
-          style={{
-            top: `${CalcYSpacing(2)}px`,
-            transform: `translateX(${CalcXOffset(0.3)}px)`
-          }}
-        >using System.Collections.Generic;</div>
-        <div
-          className="parallax-code"
-          style={{
-            top: `${CalcYSpacing(3)}px`,
-            transform: `translateX(${CalcXOffset(0.4)}px)`
-          }}
-        >using System.ComponentModel.DataAnnotations;</div>
-        <div
-          className="parallax-code"
-          style={{
-            top: `${CalcYSpacing(4)}px`,
-            transform: `translateX(${CalcXOffset(0.5)}px)`
-          }}
-        >using Microsoft.EntityFrameworkCore;</div>
-        <div
-          className="parallax-code"
-          style={{
-            top: `${CalcYSpacing(5)}px`,
-            transform: `translateX(${CalcXOffset(0.6)}px)`
-          }}
-        >using Microsoft.Extensions.DependencyInjection;</div>
+      <Layout isFullWidth>
+        <div className="App">
+          <section className="hero">
+            <img
+              src="https://picsum.photos/id/1/800/600"
+              alt="Laptop background image"
+              className="parallax"
+              style={{
+                filter: `blur(4px)`,
+                transform: `translateY(${offset * 0.5}px)`
+              }}
+            />
+            <div className="text-wrapper">
+              <h1 className="headline">BlogSite</h1>
+              <h2 className="sub-headline">A Gatsby Blog Site</h2>
+            </div>
+          </section>
+          
+          {/* <section className="overflow" /> */}
 
-      </div>
-      <section className="overflow" />
+        </div>
+        <div className="code-wrapper" style={{ position: "relative" }}>
+            <div
+              className="parallax-code"
+              style={{
+                top: `${CalcYSpacing(0)}px`,
+                transform: `translateX(${CalcXOffset(0.1)}px)`
+              }}
+            >using System;</div>
+            <div
+              className="parallax-code"
+              style={{
+                top: `${CalcYSpacing(1)}px`,
+                transform: `translateX(${CalcXOffset(0.2)}px)`
+              }}
+            >using System.Linq;</div>
+            <div
+              className="parallax-code"
+              style={{
+                top: `${CalcYSpacing(2)}px`,
+                transform: `translateX(${CalcXOffset(0.3)}px)`
+              }}
+            >using System.Collections.Generic;</div>
+            <div
+              className="parallax-code"
+              style={{
+                top: `${CalcYSpacing(3)}px`,
+                transform: `translateX(${CalcXOffset(0.4)}px)`
+              }}
+            >using System.ComponentModel.DataAnnotations;</div>
+            <div
+              className="parallax-code"
+              style={{
+                top: `${CalcYSpacing(4)}px`,
+                transform: `translateX(${CalcXOffset(0.5)}px)`
+              }}
+            >using Microsoft.EntityFrameworkCore;</div>
+            <div
+              className="parallax-code"
+              style={{
+                top: `${CalcYSpacing(5)}px`,
+                transform: `translateX(${CalcXOffset(0.6)}px)`
+              }}
+            >using Microsoft.Extensions.DependencyInjection;</div>
+
+          </div>
+        <div id="domino-container">
+          <img
+            src="https://picsum.photos/id/1/800/600"
+            alt="test"
+            className="domino-img"
+          />
+          <div className="domino-text-wrapper"><div>TEST</div></div>
+
+        </div>
+      </Layout>
     </div>
-       </Layout>
-     </div>
-    
   );
 }
